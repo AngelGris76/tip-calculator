@@ -1,0 +1,29 @@
+form.calculator(action="pos")
+  .calculator__inputs
+    .calculator__money-container
+      label.calculator__label(for="money") Bill
+      input.calculator__money#money(type="number" name="money")
+      p.calculator__alert.calculator__moneyalert(aria-hidden="true") can't be zero
+    fielset.calculator__tips
+      legend.calculator__legend Select Tip %
+      .calculator__controls
+        +button("5%")
+        +button("10%")
+        +button("15%")
+        +button("25%")
+        +button("50%")
+        input.calculator__customtip(type="number" aria-label="Custom Tip" placeholder="Custom")
+    .calculator__people-container
+      label.calculator__label(for="people") Number of People
+      input.calculator__peoplenumber#people(type="number" name="people")
+      p.calculator__alert.calculator__peoplealert(aria-hidden="true") can't be zero
+  .calculator__results
+    .calculator__tipamount
+      p.amount-paragraph Tip Amount
+        span.individual / person
+      p.amount-value $0.00
+    .calculator__total
+      p.total-paragraph Total
+        span.individual / person
+      p.total-value $0.00
+    button.calculator__button(type="reset") reset
