@@ -6,6 +6,7 @@
 
 :root {
   --Strong-cyan: hsl(172, 67%, 45%);
+  --Light-strong-cyan: hsl(170, 60%, 70%);
   --Very-dark-cyan: hsl(183, 100%, 15%);
   --Dark-grayish-cyan: hsl(186, 14%, 43%);
   --Medium-dark-grayish-cyan: hsl(184, 14%, 56%);
@@ -21,10 +22,20 @@ body {
   font-weight: 700;
   margin-top: 3em;
 }
+@media screen and (min-width: 1024px) {
+  body {
+    margin-top: 10.2em;
+  }
+}
 
 .title {
   margin-bottom: 1.2em;
   text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .title {
+    margin-bottom: 2.5em;
+  }
 }
 
 .calculator {
@@ -35,8 +46,24 @@ body {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 1024px) {
+  .calculator {
+    max-width: 940px;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 3em;
+    align-items: stretch;
+  }
+}
 .calculator__inputs {
   color: var(--Dark-grayish-cyan);
+}
+@media screen and (min-width: 1024px) {
+  .calculator__inputs {
+    width: 100%;
+    padding-top: 1em;
+  }
 }
 .calculator__label {
   margin-bottom: 0.8em;
@@ -48,6 +75,16 @@ body {
 .calculator__money-container, .calculator__people-container {
   position: relative;
   margin-bottom: 2em;
+}
+@media screen and (min-width: 1024px) {
+  .calculator__money-container, .calculator__people-container {
+    margin-bottom: 2.5em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .calculator__people-container {
+    margin-bottom: 0.8em;
+  }
 }
 .calculator__money-container::after, .calculator__people-container::after {
   position: absolute;
@@ -76,6 +113,16 @@ body {
   gap: 17px;
   margin-bottom: 2em;
 }
+@media screen and (min-width: 1024px) {
+  .calculator__controls {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 48px);
+    margin-bottom: 2.7em;
+  }
+}
+.calculator__button--pressed {
+  background-color: var(--Strong-cyan);
+}
 .calculator__money, .calculator__peoplenumber, .calculator__buttontip, .calculator__customtip, .calculator__button {
   font-size: 1.5rem;
   font-weight: inherit;
@@ -88,6 +135,13 @@ body {
 .calculator__buttontip {
   color: var(--White);
   background-color: var(--Very-dark-cyan);
+}
+@media screen and (min-width: 1024px) {
+  .calculator__buttontip:hover {
+    background-color: var(--Light-strong-cyan);
+    color: var(--Very-dark-cyan);
+    cursor: pointer;
+  }
 }
 .calculator__money::-webkit-inner-spin-button, .calculator__money::-webkit-outer-spin-button, .calculator__customtip::-webkit-inner-spin-button, .calculator__customtip::-webkit-outer-spin-button, .calculator__peoplenumber::-webkit-inner-spin-button, .calculator__peoplenumber::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -105,6 +159,13 @@ body {
 .calculator__money:focus, .calculator__customtip:focus, .calculator__peoplenumber:focus {
   border-color: var(--Strong-cyan);
   outline: none;
+}
+@media screen and (min-width: 1024px) {
+  .calculator__money:hover, .calculator__customtip:hover, .calculator__peoplenumber:hover {
+    border-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+    cursor: pointer;
+  }
 }
 .calculator__money::placeholder, .calculator__peoplenumber::placeholder {
   color: var(--Medium-dark-grayish-cyan);
@@ -126,10 +187,23 @@ body {
   align-items: stretch;
   height: 250px;
 }
+@media screen and (min-width: 1024px) {
+  .calculator__results {
+    width: 100%;
+    height: auto;
+    padding: 2.5em;
+    justify-content: flex-start;
+  }
+}
 .calculator__tipamount, .calculator__total {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media screen and (min-width: 1024px) {
+  .calculator__tipamount, .calculator__total {
+    margin-bottom: 3em;
+  }
 }
 .calculator__paragraph {
   color: var(--White);
@@ -149,10 +223,26 @@ body {
 .calculator__button--empty {
   opacity: 0.2;
 }
+@media screen and (min-width: 1024px) {
+  .calculator__button {
+    margin-top: auto;
+  }
+  .calculator__button:hover {
+    background-color: var(--Light-strong-cyan);
+    opacity: 1;
+    cursor: pointer;
+  }
+}
 
 .amount-value,
 .total-value {
   font-size: 2rem;
   margin: 0;
   color: var(--Strong-cyan);
+}
+@media screen and (min-width: 1024px) {
+  .amount-value,
+.total-value {
+    font-size: 3rem;
+  }
 }

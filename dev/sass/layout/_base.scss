@@ -5,7 +5,7 @@
 }
 :root {
   --Strong-cyan: hsl(172, 67%, 45%);
-
+  --Light-strong-cyan: hsl(170, 60%, 70%);
   --Very-dark-cyan: hsl(183, 100%, 15%);
   --Dark-grayish-cyan: hsl(186, 14%, 43%);
   --Medium-dark-grayish-cyan: hsl(184, 14%, 56%);
@@ -22,9 +22,15 @@ body {
   font-family: "Space Mono", monospace;
   font-weight: 700;
   margin-top: 3em;
+  @media screen and (min-width: 1024px) {
+    margin-top: 10.2em;
+  }
 }
 
 .title {
   margin-bottom: 1.2em;
   text-align: center;
+  @media screen and (min-width: 1024px) {
+    margin-bottom: 2.5em;
+  }
 }
