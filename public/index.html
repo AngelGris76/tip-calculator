@@ -37,36 +37,36 @@
         <div class="calculator__inputs">
           <div class="calculator__money-container">
             <label class="calculator__label" for="money">Bill</label>
-            <input class="calculator__money" id="money" type="number" name="money">
-            <p class="calculator__alert calculator__moneyalert" aria-hidden="true">can't be zero</p>
+            <input class="calculator__money" id="money" type="number" name="money" placeholder="0">
+            <p class="calculator__alert calculator__alert--hide" aria-hidden="true">Can't be zero</p>
           </div>
           <fielset class="calculator__tips">
             <legend class="calculator__legend">Select Tip %</legend>
             <div class="calculator__controls">
-              <button class="calculator__buttontip" type="button">5%</button>
-              <button class="calculator__buttontip" type="button">10%</button>
-              <button class="calculator__buttontip" type="button">15%</button>
-              <button class="calculator__buttontip" type="button">25%</button>
-              <button class="calculator__buttontip" type="button">50%</button>
+              <button class="calculator__buttontip" type="button" value="5">5%</button>
+              <button class="calculator__buttontip" type="button" value="10">10%</button>
+              <button class="calculator__buttontip" type="button" value="15">15%</button>
+              <button class="calculator__buttontip" type="button" value="25">25%</button>
+              <button class="calculator__buttontip" type="button" value="50">50%</button>
               <input class="calculator__customtip" type="number" aria-label="Custom Tip" placeholder="Custom">
             </div>
           </fielset>
           <div class="calculator__people-container">
             <label class="calculator__label" for="people">Number of People</label>
-            <input class="calculator__peoplenumber" id="people" type="number" name="people">
-            <p class="calculator__alert calculator__peoplealert" aria-hidden="true">can't be zero</p>
+            <input class="calculator__peoplenumber" id="people" type="number" name="people" placeholder="0">
+            <p class="calculator__alert calculator__alert--hide" aria-hidden="true">Can't be zero</p>
           </div>
         </div>
         <div class="calculator__results">
           <div class="calculator__tipamount">
-            <p class="amount-paragraph">Tip Amount<span class="individual">/ person</span></p>
+            <p class="calculator__paragraph">Tip Amount<span class="calculator__individual">/ person</span></p>
             <p class="amount-value">$0.00</p>
           </div>
           <div class="calculator__total">
-            <p class="total-paragraph">Total<span class="individual">/ person</span></p>
+            <p class="calculator__paragraph">Total<span class="calculator__individual">/ person</span></p>
             <p class="total-value">$0.00</p>
           </div>
-          <button class="calculator__button" type="reset">reset</button>
+          <button class="calculator__button calculator__button--empty" type="reset">RESET</button>
         </div>
       </form>
     </main>

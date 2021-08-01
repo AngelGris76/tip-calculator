@@ -1,0 +1,9 @@
+@use "layout/base";
+@use "layout/form";
+
+.amount-value,
+.total-value {
+  font-size: 2rem;
+  margin: 0;
+  color: var(--Strong-cyan);
+}
