@@ -85,10 +85,6 @@
     }
   }
 
-  &__button--pressed {
-    background-color: var(--Strong-cyan);
-  }
-
   &__money,
   &__peoplenumber,
   &__buttontip,
@@ -106,6 +102,10 @@
   &__buttontip {
     color: var(--White);
     background-color: var(--Very-dark-cyan);
+  }
+
+  &__button--pressed {
+    background-color: var(--Strong-cyan);
   }
 
   &__buttontip {

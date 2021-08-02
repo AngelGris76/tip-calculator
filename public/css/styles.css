@@ -120,9 +120,6 @@ body {
     margin-bottom: 2.7em;
   }
 }
-.calculator__button--pressed {
-  background-color: var(--Strong-cyan);
-}
 .calculator__money, .calculator__peoplenumber, .calculator__buttontip, .calculator__customtip, .calculator__button {
   font-size: 1.5rem;
   font-weight: inherit;
@@ -135,6 +132,9 @@ body {
 .calculator__buttontip {
   color: var(--White);
   background-color: var(--Very-dark-cyan);
+}
+.calculator__button--pressed {
+  background-color: var(--Strong-cyan);
 }
 @media screen and (min-width: 1024px) {
   .calculator__buttontip:hover {
