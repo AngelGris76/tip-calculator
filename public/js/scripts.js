@@ -4,6 +4,7 @@ const amountValue = document.querySelector(".amount-value");
 const totalValue = document.querySelector(".total-value");
 const inputMoney = document.getElementById("money");
 const inputPeople = document.getElementById("people");
+const resetButton = document.querySelector(".calculator__button");
 let tip = 0;
 
 const clearButtons = () => {
@@ -19,7 +20,10 @@ const clearCosts = () => {
 
 const clearError = (element) => {
   element.classList.remove("calculator__input--invalid");
+  element.removeAttribute("aria-invalid");
   element.nextElementSibling.classList.add("calculator__alert--hide");
+  element.nextElementSibling.removeAttribute("role");
+  element.nextElementSibling.setAttribute("aria-hidden", "true");
 };
 
 const checkError = (inputToCheck) => {
@@ -28,7 +32,10 @@ const checkError = (inputToCheck) => {
     Number.isNaN(parseFloat(inputToCheck.value))
   ) {
     inputToCheck.classList.add("calculator__input--invalid");
+    inputToCheck.setAttribute("aria-invalid", "true");
     inputToCheck.nextElementSibling.classList.remove("calculator__alert--hide");
+    inputToCheck.nextElementSibling.setAttribute("role", "alert");
+    inputToCheck.nextElementSibling.removeAttribute("aria-hidden");
     return true;
   } else {
     clearError(inputToCheck);
@@ -53,6 +60,7 @@ formTip.addEventListener("click", (e) => {
     clearButtons();
     element.classList.add("calculator__button--pressed");
     tip = parseFloat(element.value);
+    resetButton.classList.remove("calculator__button--empty");
     calculateCost();
   }
   if (element.classList.contains("calculator__button")) {
@@ -61,6 +69,7 @@ formTip.addEventListener("click", (e) => {
     clearError(inputMoney);
     clearError(inputPeople);
     tip = 0;
+    resetButton.classList.add("calculator__button--empty");
   }
 });
 
@@ -70,5 +79,6 @@ formTip.addEventListener("change", (e) => {
     clearButtons();
     tip = parseFloat(element.value);
   }
+  resetButton.classList.remove("calculator__button--empty");
   calculateCost();
 });
