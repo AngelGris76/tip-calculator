@@ -40,8 +40,8 @@
             <input class="calculator__money" id="money" type="number" name="money" placeholder="0">
             <p class="calculator__alert calculator__alert--hide" aria-hidden="true">Can't be zero</p>
           </div>
-          <fielset class="calculator__tips">
-            <legend class="calculator__legend">Select Tip %</legend>
+          <div class="calculator__tips" role="group" aria-labelledby="calculatorLegend">
+            <p class="calculator__legend" id="calculatorLegend">Select Tip %</p>
             <div class="calculator__controls">
               <button class="calculator__buttontip" type="button" value="5">5%</button>
               <button class="calculator__buttontip" type="button" value="10">10%</button>
@@ -50,7 +50,7 @@
               <button class="calculator__buttontip" type="button" value="50">50%</button>
               <input class="calculator__customtip" type="number" aria-label="Custom Tip" placeholder="Custom">
             </div>
-          </fielset>
+          </div>
           <div class="calculator__people-container">
             <label class="calculator__label" for="people">Number of People</label>
             <input class="calculator__peoplenumber" id="people" type="number" name="people" placeholder="0">
@@ -70,6 +70,6 @@
         </div>
       </form>
     </main>
+    <script src="js/scripts.js"></script>
   </body>
-  <script src="js/scripts.js"></script>
 </html>
